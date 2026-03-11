@@ -16,6 +16,7 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { MobileSidebar } from "@/components/Sidebar";
 import { ModeToggle } from "./ui/mode-toggle";
+import { ThemeSelector } from "./theme-selector";
 
 interface NavbarProps {
   userName?: string;
@@ -48,6 +49,7 @@ export default function Navbar({ userName, userEmail }: NavbarProps) {
 
       {/* Right actions */}
       <div className="ml-auto flex items-center gap-1">
+        <ThemeSelector />
         <ModeToggle/>
         <Button variant="ghost" size="icon" className="h-9 w-9 text-muted-foreground hidden md:flex">
           <LayoutGrid className="h-4 w-4" />
